@@ -5,7 +5,7 @@ import CategoryGridTitle from "../components/CategoryGridTile";
 function CategoryScreen({ navigation }) {
   function renderCategoryItem(itemData) {
     function pressHandler() {
-      navigation.navigate("mealsOverview");
+      navigation.navigate("mealsOverview", { categoryId: itemData.item.id });
     }
 
     return (
