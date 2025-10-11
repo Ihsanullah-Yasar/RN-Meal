@@ -1,9 +1,10 @@
 import { View, Text } from "react-native";
 
-function MealsOverviewScreen() {
+function MealsOverviewScreen({ route }) {
+  const categoryId = route.params.categoryId;
   return (
     <View>
-      <Text>Meals overview screen</Text>
+      <Text>Meals overview screen - {categoryId}</Text>
     </View>
   );
 }
