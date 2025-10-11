@@ -12,17 +12,12 @@ export default function App() {
   return (
     <>
       <StatusBar style="dark" />
-      <SafeAreaProvider>
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Categories" component={CategoryScreen} />
-            <Stack.Screen
-              name="mealsOverview"
-              component={MealsOverviewScreen}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Categories" component={CategoryScreen} />
+          <Stack.Screen name="mealsOverview" component={MealsOverviewScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 }
