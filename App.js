@@ -20,6 +20,8 @@ export default function App() {
             contentStyle: {
               backgroundColor: "#4b1010ff",
             },
+            headerBlurEffect: "extraLight",
+            headerShadowVisible: true,
           }}
         >
           <Stack.Screen
@@ -30,9 +32,12 @@ export default function App() {
             component={CategoryScreen}
           />
           <Stack.Screen
-            header
             name="mealsOverview"
             component={MealsOverviewScreen}
+            // options={({ route, navigation }) => {
+            //   const catId = route.params.categoryId;
+            //   return { title: catId };
+            // }}
           />
         </Stack.Navigator>
       </NavigationContainer>
