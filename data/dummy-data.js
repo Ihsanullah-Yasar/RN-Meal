@@ -354,6 +354,7 @@ export const CATEGORIES = [
   new Category("c8", "Asian", "#b9ffb0"),
   new Category("c9", "French", "#ffc7ff"),
   new Category("c10", "Summer", "#47fced"),
+  new Category("c11", "Afgani", "#5597eeff"),
 ];
 
 export const MEALS = [
