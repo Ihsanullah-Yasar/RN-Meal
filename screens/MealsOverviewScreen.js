@@ -13,18 +13,22 @@ function MealsOverviewScreen({ route, navigation }) {
 
     navigation.setOptions({ title: categoryTitle });
   }, [catId, navigation]);
+
   const displayedMeals = MEALS.filter((mealItem) => {
     return mealItem.categoryIds.indexOf(catId) >= 0;
   });
 
   function renderMealItem(itemData) {
     const item = itemData.item;
+    // console.log(item.id);
     const mealItemProps = {
+      id: item.id,
       title: item.title,
       imageUrl: item.imageUrl,
       duration: item.duration,
       complexity: item.complexity,
       affordability: item.affordability,
+      navigation: navigation,
     };
     return <MealItem {...mealItemProps} />;
   }
