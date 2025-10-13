@@ -28,7 +28,6 @@ function MealsOverviewScreen({ route, navigation }) {
       duration: item.duration,
       complexity: item.complexity,
       affordability: item.affordability,
-      navigation: navigation,
     };
     return <MealItem {...mealItemProps} />;
   }
