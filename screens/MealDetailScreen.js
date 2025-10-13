@@ -26,7 +26,7 @@ function MealDetailScreen({ route, navigation }) {
         return <Button title="Tap Me" onPress={headerButtonPressHandler} />;
       },
     });
-  }, []);
+  }, [navigation, headerButtonPressHandler]);
 
   return (
     <ScrollView style={styles.rootScreen}>
