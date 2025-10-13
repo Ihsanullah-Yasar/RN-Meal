@@ -40,7 +40,7 @@ export default function App() {
             // }}
           />
           <Stack.Screen
-            name="mealDetails"
+            name="mealDetail"
             component={MealDetailScreen}
             // options={({ route, navigation }) => {
             //   const catId = route.params.categoryId;
