@@ -9,7 +9,9 @@ import MealDetailScreen from "./screens/MealDetailScreen";
 import FavoritesScreen from "./screens/FavoritesScreen";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign } from "@expo/vector-icons";
-import FavotitesContextProvider from "./store/context/favorites-context";
+import { Provider } from "react-redux";
+import { store } from "./store/redux/store";
+// import FavotitesContextProvider from "./store/context/favorites-context";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -57,7 +59,8 @@ export default function App() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.root}>
         <StatusBar style="light" />
-        <FavotitesContextProvider>
+        {/* <FavotitesContextProvider> */}
+        <Provider store={store}>
           <NavigationContainer>
             <Stack.Navigator
               screenOptions={{
@@ -93,7 +96,8 @@ export default function App() {
               />
             </Stack.Navigator>
           </NavigationContainer>
-        </FavotitesContextProvider>
+        </Provider>
+        {/* </FavotitesContextProvider> */}
       </SafeAreaView>
     </SafeAreaProvider>
   );
